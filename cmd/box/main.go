@@ -23,7 +23,7 @@ func main() {
 	gistID := os.Getenv("GIST_ID")
 	updateOption := os.Getenv("UPDATE_OPTION") // options for update: GIST,MARKDOWN,GIST_AND_MARKDOWN
 	markdownFile := os.Getenv("MARKDOWN_FILE") // the markdown filename
-
+	fmt.Println(wakaAPIKey, ghToken, ghUsername, gistID, updateOption, markdownFile)
 	var updateGist, updateMarkdown bool
 	if updateOption == "MARKDOWN" {
 		updateMarkdown = true
