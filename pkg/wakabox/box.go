@@ -91,6 +91,7 @@ func (b *Box) GetStats(ctx context.Context) ([]string, error) {
 
 // GetGist gets the gist from github.com.
 func (b *Box) GetGist(ctx context.Context, id string) (*github.Gist, error) {
+	fmt.Println(id)
 	gist, _, err := b.github.Gists.Get(ctx, id)
 	if err != nil {
 		return nil, fmt.Errorf("wakabox.GetGist: Error getting gist from github: %w", err)
